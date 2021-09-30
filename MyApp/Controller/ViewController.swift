@@ -50,6 +50,12 @@ class ViewController: UIViewController {
     
     func setValue(text:String)->String{
         
+       
+        if textResult.text?.first == "0"{
+            if text == "0"{
+              return "0"
+            }
+        }
         if text == "." {
             if textResult.text == "0"{
                 currentValue = "0"
@@ -106,7 +112,7 @@ class ViewController: UIViewController {
         //
         textPrevious.text = previousValue
         sign = sender.currentTitle!
-        textSign.text = "operation \(sign)"
+        textSign.text = "\(sign)"
         
     }
     
